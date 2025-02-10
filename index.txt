@@ -1,8 +1,5 @@
 hii.. 
 This is my 1st local repository
 This is a new feature.
-<<<<<<< HEAD
 dropdown
-=======
 button
->>>>>>> main
