@@ -21,4 +21,29 @@ and automation.
 • Proficient in Linux and Windows administration, with experience in shell scripting for task 
 automation. 
 • Strong troubleshooting and problem-solving skills, working closely with development, QA, and 
-support teams to ensure smooth deployments and operations.
+support teams to ensure smooth deployments and operations.    
+
+
+
+
+TECHNICAL SKILLS (Trained / Project Acquired Skills): 
+SCM Tools 
+Database 
+Ticketing Tool 
+Scripting Language 
+Operating Systems 
+CI/CD Tools 
+AWS Services 
+AWS Monitoring Services 
+Build Tool 
+Servers 
+Git, GitHub 
+RDS (MySql 8) 
+JIRA 
+Shell Scripting, Jenkins Declarative Pipeline 
+Linux, Windows 
+Jenkins, Docker, Ansible, Terraform, Kubernetes 
+EC2, ELB, VPC, S3, SNS, RDS, Route 53, IAM 
+Cloud Watch and CloudTrail 
+Maven 
+Apache Tomcat 9
