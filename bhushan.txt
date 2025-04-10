@@ -1,0 +1,24 @@
+DevOps Engineer with 3.5 years of experience in AWS Cloud, DevOps practices, and Build & 
+Release Management across Telecom and Healthcare domains. 
+• Strong understanding of the Software Development Life Cycle (SDLC) and experience working with 
+Agile and V-Model methodologies. 
+• Proficient in version control systems like Git and GitHub, managing repositories, branches, tags, 
+and access controls. 
+• Hands-on experience in CI/CD pipeline automation using Jenkins, including declarative pipelines, 
+multi-branch configurations, and job automation. 
+• Expertise in build and deployment automation using Maven, Docker, and Ansible, ensuring 
+seamless software delivery. 
+• Skilled in deploying applications on standalone Tomcat and JBoss servers as well as Docker 
+containers for scalable and efficient deployment. 
+• Strong knowledge of AWS cloud services, including EC2, VPC, S3, IAM, RDS, Route 53, ELB, Auto 
+Scaling, CloudFront, CloudWatch, and CloudTrail. 
+• Experience in infrastructure monitoring and log analysis using AWS CloudWatch, setting up custom 
+dashboards and alerts. 
+• Expertise in IAM policy management, creating roles, groups, and enforcing security best practices 
+for cloud access control. 
+• Familiar with Terraform for Infrastructure as Code (IaC) and Ansible for configuration management 
+and automation. 
+• Proficient in Linux and Windows administration, with experience in shell scripting for task 
+automation. 
+• Strong troubleshooting and problem-solving skills, working closely with development, QA, and 
+support teams to ensure smooth deployments and operations.
