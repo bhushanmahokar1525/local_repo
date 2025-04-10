@@ -1,0 +1,133 @@
+ {
+     DbConnection conn = new DbConnection(Data Source = LAPTOP - P7LRQUHJ\SQLEXPRESS01; Initial Catalog = register; Integrated Security = True; Trust Server Certificate = True);
+     DbCommand cmd = new DbCommand(@"INSERT INTO [dbo].[register]
+    ([firstname]
+    ,[lastname]
+    ,[address]
+    ,[gender]
+    ,[email]
+    ,[password])
+     VALUES
+          ('"+txtFname.text+"', '"+txtLname.text+"', '"+txtAdd.Text+"', '"+cmbGender.SelectedItem.ToString()+"', '"+txtEmail.text+"', '"+txtPass.Text+"')", conn);
+           conn.Open();
+           cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Register successfully..")
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ void BindData()
+ {
+     SqlCommand command = new SqlCommand("select * from ProductInfo", conn);
+     SqlDataAdapter sd = new SqlDataAdapter(command);
+     DataTable dt = new DataTable();
+     sd.Fill(dt);
+     dataGridView1.DataSource = dt;
+ }
+
+
+
+
+
+
+
+private void button2_Click(object sender, EventArgs e)
+{
+    // Define the connection string
+    SqlConnection conn = new SqlConnection("Data Source=LAPTOP-P7LRQUHJ\\SQLEXPRESS01;Initial Catalog=recordDB;Integrated Security=True;TrustServerCertificate=True");
+
+    try
+    {
+        // Open the connection
+        conn.Open();
+
+        // Define the SQL command with parameters
+        string query = "UPDATE ProductInfo SET ItemName = @ItemName, Design = @Design, Color = @Color, UpdateDate = GETDATE() WHERE ProductID = @ProductID";
+        SqlCommand command = new SqlCommand(query, conn);
+
+        // Add parameters to avoid SQL injection
+        command.Parameters.AddWithValue("@ProductID", int.Parse(textBox1.Text));
+        command.Parameters.AddWithValue("@ItemName", textBox2.Text);
+        command.Parameters.AddWithValue("@Design", textBox3.Text);
+        command.Parameters.AddWithValue("@Color", comboBox1.Text);
+
+        // Execute the command
+        command.ExecuteNonQuery();
+
+        // Inform the user
+        MessageBox.Show("Successfully updated");
+
+    }
+    catch (Exception ex)
+    {
+        // Handle exceptions
+        MessageBox.Show("An error occurred: " + ex.Message);
+    }
+    finally
+    {
+        // Ensure the connection is closed
+        if (conn.State == ConnectionState.Open)
+        {
+            conn.Close();
+        }
+    }
+}
+
+
+private void button3_Click(object sender, EventArgs e)
+{
+    // Define the connection string
+    SqlConnection conn = new SqlConnection("Data Source=LAPTOP-P7LRQUHJ\\SQLEXPRESS01;Initial Catalog=recordDB;Integrated Security=True;TrustServerCertificate=True");
+
+    try
+    {
+        // Open the connection
+        conn.Open();
+
+        // Define the SQL command with a parameter
+        string query = "DELETE FROM ProductInfo WHERE ProductID = @ProductID";
+        SqlCommand command = new SqlCommand(query, conn);
+
+        // Add parameters to avoid SQL injection
+        command.Parameters.AddWithValue("@ProductID", int.Parse(textBox1.Text));
+
+        // Execute the command
+        int rowsAffected = command.ExecuteNonQuery();
+
+        if (rowsAffected > 0)
+        {
+            // Inform the user if a row was deleted
+            MessageBox.Show("Successfully deleted");
+        }
+        else
+        {
+            // Inform the user if no rows were deleted (e.g., ProductID not found)
+            MessageBox.Show("No record found with the given ProductID");
+        }
+    }
+    catch (Exception ex)
+    {
+        // Handle exceptions
+        MessageBox.Show("An error occurred: " + ex.Message);
+    }
+    finally
+    {
+        // Ensure the connection is closed
+        if (conn.State == ConnectionState.Open)
+        {
+            conn.Close();
+        }
+    }
+}
+
